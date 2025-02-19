@@ -39,7 +39,7 @@ export default function EditAdvertisementModal({ open, advertisement, onClose, o
 
     const handleSave = () => {
         if (name.length < 1) return alert('Brak nazwy');
-        if (!isAdvertisementNameAvailable(name)) return alert('Nazwa jest juz uzywana');
+        if (!isAdvertisementNameAvailable(name, advertisement.id)) return alert('Nazwa jest juz uzywana');
         if (!startDate) return alert('Niepoprawna data rozpoczęcia');
         if (!endDate) return alert('Niepoprawna data zakończenia');
         if (startDate.isBefore(dayjs(), 'day')) return alert('Data rozpoczęcia nie moze być wcześniejsza niz dzisiaj');

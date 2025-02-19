@@ -6,7 +6,7 @@ import { checkPassword, logIn } from '../helpers/auth';
 import Quote from '../types/Quote';
 
 function LandingPage() {
-    const [quote, setQuote] = useState('');
+    const [quote, setQuote] = useState('asd');
     const [author, setAuthor] = useState('');
 
     const [redirectToPanel, setRedirectToPanel] = useState(false);

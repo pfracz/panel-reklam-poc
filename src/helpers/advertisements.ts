@@ -2,12 +2,12 @@ import _uniqueId from 'lodash/uniqueId';
 import Advertisement from '../types/Advertisement';
 import ExampleAdvertisements from '../db/ExampleAdvertisements';
 
-export function isAdvertisementNameAvailable(name: string): boolean {
+export function isAdvertisementNameAvailable(name: string, id?: string): boolean {
     const advertisements: Advertisement[] = getAdvertisements();
 
     let available = true;
     for (let i = 0; i < advertisements.length; i++) {
-        if (advertisements[i].name === name) {
+        if (advertisements[i].name === name && advertisements[i].id !== id) {
             available = false;
             break;
         }
