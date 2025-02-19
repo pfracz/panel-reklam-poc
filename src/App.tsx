@@ -8,7 +8,7 @@ import PrivateRoute from './components/PrivateRoute';
 
 function App() {
     return (
-        <Router>
+        <Router basename="/panel-reklam-poc">
             <Switch>
                 <PrivateRoute path="/advertisements/new">
                     <CreateAdvertisementPage />
